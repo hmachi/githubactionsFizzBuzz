@@ -1,7 +1,8 @@
 name: Continuos Integration # ワークフローの名前
-on: push: # ワークフローを実行するイベント名
-  branches:
-    - master # マスタブランチにpushされた時のみ実行される
+on: 
+  push: # ワークフローを実行するイベント名
+    branches:
+      - main # mainブランチにpushされた時のみ実行される
 
 jobs: # ジョブの定義
   unit-test: # ジョブのID
