@@ -1,17 +1,19 @@
-name: Continuos Integration
-on: push
+name: Continuos Integration # ワークフローの名前
+on: push: # ワークフローを実行するイベント名
+  branches:
+    - master # マスタブランチにpushされた時のみ実行される
 
-jobs:
-  unit-test:
-    name: Unit Test
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2.0.0
+jobs: # ジョブの定義
+  unit-test: # ジョブのID
+    name: Unit Test # ジョブの名前
+    runs-on: ubuntu-latest # ジョブが実行されるマシン名
+    steps: # ジョブが実行するステップの定義
+      - name: Checkout # ステップ名
+        uses: actions/checkout@v2.0.0 # アクションの実行を定義
       - name: Set Node.js 18.x
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: 18.x # パラメータを指定
       - name: Install dependencies
         run: npm ci
       - name: Test
