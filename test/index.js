@@ -8,6 +8,7 @@ describe("fizzbuzz", () => {
 
   it("returns Fizz when value is divisible by 3", () => {
     assert(fizzbuzz(9) === "Fizz");
+    
   });
 
   it("returns Buzz when value is divisible by 5", () => {
