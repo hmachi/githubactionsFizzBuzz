@@ -9,5 +9,5 @@ module.exports = function fizzbuzz(value) {
     return "Buzz";
   }
 
-  return String(value);
+  return String(value + "です");
 };
